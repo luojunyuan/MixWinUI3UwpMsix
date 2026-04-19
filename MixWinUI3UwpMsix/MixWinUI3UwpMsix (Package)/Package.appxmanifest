@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+  xmlns:systemai="http://schemas.microsoft.com/appx/manifest/systemai/windows10"
+  IgnorableNamespaces="uap rescap systemai">
+
+  <Identity
+    Name="cb5dd4c8-198e-4638-b01d-4f34d49cc8cd"
+    Publisher="CN=kimika"
+    Version="1.0.0.0" />
+
+  <mp:PhoneIdentity PhoneProductId="cb5dd4c8-198e-4638-b01d-4f34d49cc8cd" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+
+  <Properties>
+    <DisplayName>MixWinUI3UwpMsix (Package)</DisplayName>
+    <PublisherDisplayName>kimika</PublisherDisplayName>
+    <Logo>Images\StoreLogo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.22000.0" MaxVersionTested="10.0.26226.0" />
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.22000.0" MaxVersionTested="10.0.26226.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="x-generate"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="WinUI3App"
+      Executable="$targetnametoken$.exe"
+      EntryPoint="$targetentrypoint$">
+      <uap:VisualElements
+        DisplayName="MixWinUI3UwpMsix (Package)"
+        Description="MixWinUI3UwpMsix (Package)"
+        BackgroundColor="transparent"
+        Square150x150Logo="Images\Square150x150Logo.png"
+        Square44x44Logo="Images\Square44x44Logo.png">
+        <uap:DefaultTile Wide310x150Logo="Images\Wide310x150Logo.png" />
+        <uap:SplashScreen Image="Images\SplashScreen.png" />
+      </uap:VisualElements>
+    </Application>
+    <Application Id="UwpApp"
+      Executable="UwpApp\UwpApp.exe"
+      EntryPoint="UwpApp.App">
+      <uap:VisualElements
+        DisplayName="UwpApp"
+        Square150x150Logo="Images\Square150x150Logo.png"
+        Square44x44Logo="Images\Square44x44Logo.png"
+        Description="UwpApp"
+        BackgroundColor="transparent">
+        <uap:DefaultTile Wide310x150Logo="Images\Wide310x150Logo.png" />
+        <uap:SplashScreen Image="Images\SplashScreen.png" />
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust" />
+    <systemai:Capability Name="systemAIModels"/>
+  </Capabilities>
+</Package>
