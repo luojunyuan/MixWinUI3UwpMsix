@@ -38,3 +38,6 @@ UWP / WinUI Package 模版关键对比 （2026.7.2）
 
 warning NU1702: 已使用“.NETCoreApp,Version=v11.0”而不是项目目标框架“.NETFramework,Version=v4.5.1”解析 ProjectReference“C:\Users\user\source\repos\TestMsixUwp\App1\App1\App1.csproj”。此项目可能与你的项目不完全兼容。
 
+UWP 一旦安装 MUXC 2.8.7，启动 winui 时就会提示
+
+Cannot create instance of type 'Microsoft.UI.Xaml.Controls.XamlControlsResources' [Line: 10 Position: 40]
